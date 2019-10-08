@@ -11,7 +11,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>es.ing</groupId>
-	<artifactId>modular</artifactId>
+	<artifactId>institucionesPublicas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>modular</name>
 	<description>Demo project for Spring Boot</description>
@@ -59,11 +59,11 @@
 	</build>
 
 	<modules>
-		<module>InstitucionesPublicas-controller</module>
-		<module>InstitucionesPublicas-repository</module>
-		<module>InstitucionesPublicas-service</module>
-		<module>InstitucionesPublicas-batch</module>
-		<module>InstitucionesPublicas-boot</module>
+		<module>institucionesPublicas-controller</module>
+		<module>institucionesPublicas-repository</module>
+		<module>institucionesPublicas-service</module>
+		<module>institucionesPublicas-batch</module>
+		<module>institucionesPublicas-boot</module>
 	</modules>
 
 </project>

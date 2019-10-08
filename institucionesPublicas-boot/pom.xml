@@ -9,11 +9,11 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<artifactId>modular-boot</artifactId>
+	<artifactId>institucionesPublicas-boot</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>es.ing</groupId>
-			<artifactId>modular-controller</artifactId>
+			<artifactId>institucionesPublicas-controller</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

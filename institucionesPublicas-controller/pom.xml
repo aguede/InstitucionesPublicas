@@ -9,12 +9,12 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<artifactId>modular-controller</artifactId>
+	<artifactId>institucionesPublicas-controller</artifactId>
 	
 	<dependencies>
 		<dependency>
 			<groupId>es.ing</groupId>
-			<artifactId>InstitucionesPublicas-service</artifactId>
+			<artifactId>institucionesPublicas-service</artifactId>
 		</dependency>
 	</dependencies>
 </project>
