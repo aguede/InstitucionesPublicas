@@ -59,11 +59,11 @@
 	</build>
 
 	<modules>
-		<module>modular-controller</module>
-		<module>modular-repository</module>
-		<module>modular-services</module>
-		<module>modular-batch</module>
-		<module>modular-boot</module>
+		<module>InstitucionesPublicas-controller</module>
+		<module>InstitucionesPublicas-repository</module>
+		<module>InstitucionesPublicas-service</module>
+		<module>InstitucionesPublicas-batch</module>
+		<module>InstitucionesPublicas-boot</module>
 	</modules>
 
 </project>
