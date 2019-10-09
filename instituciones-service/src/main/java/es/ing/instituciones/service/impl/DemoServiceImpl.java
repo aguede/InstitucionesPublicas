@@ -42,4 +42,12 @@ public class DemoServiceImpl implements IDemoService {
         return "hello world";
     }
 
+    @Override
+    public String getCsvAsStream() {
+
+        this.getClass().getResourceAsStream("csv/");
+
+        return null;
+    }
+
 }
