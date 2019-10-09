@@ -13,7 +13,7 @@
 	<groupId>es.ing</groupId>
 	<artifactId>institucionesPublicas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>modular</name>
+	<name>institucionesPublicas</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
