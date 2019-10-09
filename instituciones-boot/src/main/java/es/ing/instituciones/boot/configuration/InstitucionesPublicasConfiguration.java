@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import es.ing.instituciones.controller.IDemoController;
+import es.ing.instituciones.controller.exception.InstitucionesPublicasErrorAdvice;
 import es.ing.instituciones.controller.impl.DemoControllerImpl;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -32,6 +33,13 @@ public class InstitucionesPublicasConfiguration {
                 .build();
     }
 
+    /** Definicion de bean para ControllerAdvice */
+    @Bean
+    public InstitucionesPublicasErrorAdvice institucionesPublicasErrorAdvice() {
+        return new InstitucionesPublicasErrorAdvice();
+    }
+
+    /** Definicion de bean para DemoController */
     @Bean
     public IDemoController demoController() {
         return new DemoControllerImpl();
