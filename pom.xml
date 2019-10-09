@@ -52,7 +52,6 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
 	</dependencies>
 	<modules>
 		<module>instituciones-boot</module>

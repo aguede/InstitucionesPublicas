@@ -1,5 +1,8 @@
 package es.ing.instituciones.service.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import es.ing.instituciones.bean.exception.InstitucionesPublicasServiceException;
 import es.ing.instituciones.repository.mock.IDemoRepository;
 import es.ing.instituciones.service.IDemoService;
@@ -11,7 +14,9 @@ import es.ing.instituciones.service.IDemoService;
  *
  */
 public class DemoServiceImpl implements IDemoService {
-	
+
+    Logger logger = LoggerFactory.getLogger(DemoServiceImpl.class);
+
     private IDemoRepository demoRepository;
 
     public DemoServiceImpl(IDemoRepository demoRepository) {
@@ -20,6 +25,8 @@ public class DemoServiceImpl implements IDemoService {
 
     @Override
     public String getHelloWorld() {
+        logger.debug("[DemoServiceImpl]: Enter into getHelloWorld");
+
         return demoRepository.getHelloWorld();
     }
 
