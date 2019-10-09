@@ -1,4 +1,4 @@
-package org.instituciones.repository;
+package es.ing.instituciones.repository;
 
 /**
  * Hello world!

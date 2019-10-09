@@ -1,4 +1,4 @@
-package org.instituciones.controller;
+package es.ing.instituciones.bean;
 
 /**
  * Hello world!
