@@ -1,9 +1,11 @@
 package es.ing.instituciones.controller.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import es.ing.instituciones.controller.IDemoController;
+import es.ing.instituciones.service.IDemoService;
 
 /**
  * Implementación de la interfaz {@link IDemoController}
@@ -13,9 +15,12 @@ import es.ing.instituciones.controller.IDemoController;
  */
 public class DemoControllerImpl implements IDemoController {
 
+    @Autowired
+    private IDemoService demoService;
+
     @Override
-    public ResponseEntity<String> getList() {
-        return new ResponseEntity<String>("Hello World!", HttpStatus.OK);
+    public ResponseEntity<String> getHelloWorld() {
+        return new ResponseEntity<String>(demoService.getHelloWorld(), HttpStatus.OK);
     }
 
 }

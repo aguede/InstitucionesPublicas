@@ -33,5 +33,5 @@ public interface IDemoController {
     @ApiOperation(value = "Servicio de prueba para la aplicación de instituciones publicas.", notes = "Hola Mundo!.", httpMethod = "GET", response = String.class, responseContainer = "ResponseEntity")
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Respuesta OK"),
             @ApiResponse(code = 403, message = "Forbbiden") })
-    ResponseEntity<String> getList();
+    ResponseEntity<String> getHelloWorld();
 }
