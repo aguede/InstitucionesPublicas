@@ -1,14 +1,19 @@
 package es.ing.instituciones.boot.configuration;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import es.ing.instituciones.controller.ICourseController;
 import es.ing.instituciones.controller.IDemoController;
 import es.ing.instituciones.controller.exception.InstitucionesPublicasErrorAdvice;
+import es.ing.instituciones.controller.impl.CourseControllerImpl;
 import es.ing.instituciones.controller.impl.DemoControllerImpl;
 import es.ing.instituciones.repository.mock.IDemoRepository;
 import es.ing.instituciones.repository.mock.impl.DemoRepositoryImpl;
+import es.ing.instituciones.service.ICourseService;
 import es.ing.instituciones.service.IDemoService;
+import es.ing.instituciones.service.impl.CourseServiceImpl;
 import es.ing.instituciones.service.impl.DemoServiceImpl;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -27,6 +32,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
+@MapperScan("es.ing.instituciones.repository.database.mapper")
 public class InstitucionesPublicasConfiguration {
 
     /**
@@ -78,11 +84,28 @@ public class InstitucionesPublicasConfiguration {
     /**
      * Bean de DemoRepository.
      * 
-     * @return DemoRepository.
+     * @return CourseRepository.
      */
     @Bean
     public IDemoRepository demoRepository() {
         return new DemoRepositoryImpl();
     }
 
+    
+    
+    /** Definicion de bean para CourseController */
+    @Bean
+    public ICourseController courseController() {
+        return new CourseControllerImpl(courseService());
+    }
+
+    /**
+     * Bean de CourseService.
+     * 
+     * @return courseService.
+     */
+    @Bean
+    public ICourseService courseService() {
+        return new CourseServiceImpl();
+    }
 }
