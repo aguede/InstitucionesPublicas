@@ -14,7 +14,12 @@ import org.apache.ibatis.annotations.Update;
 
 import es.ing.instituciones.repository.entities.Course;
 
-
+/**
+ * Mapper para Course
+ * 
+ * @author daniel.diaz
+ *
+ */
 @Mapper
 public interface ICourseMapper {
 

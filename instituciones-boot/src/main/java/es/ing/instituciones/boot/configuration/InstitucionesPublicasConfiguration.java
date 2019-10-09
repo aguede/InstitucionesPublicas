@@ -92,8 +92,11 @@ public class InstitucionesPublicasConfiguration {
     }
 
     
-    
-    /** Definicion de bean para CourseController */
+    /**
+     * Definicion de bean para CourseController 
+     * 
+     * @return ICourseController
+     */
     @Bean
     public ICourseController courseController() {
         return new CourseControllerImpl(courseService());
@@ -102,7 +105,7 @@ public class InstitucionesPublicasConfiguration {
     /**
      * Bean de CourseService.
      * 
-     * @return courseService.
+     * @return ICourseService.
      */
     @Bean
     public ICourseService courseService() {

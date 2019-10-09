@@ -16,7 +16,12 @@ import es.ing.instituciones.repository.entities.Course;
 import es.ing.instituciones.repository.exceptions.EntityNotFoundException;
 import es.ing.instituciones.service.ICourseService;
 
-
+/**
+ * Implementación de la interfaz {@link ICourseController}}
+ * 
+ * @author daniel.diaz
+ *
+ */
 @RestController
 public class CourseControllerImpl implements ICourseController {
 
