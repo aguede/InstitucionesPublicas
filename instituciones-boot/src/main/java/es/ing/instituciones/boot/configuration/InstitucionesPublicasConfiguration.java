@@ -3,6 +3,9 @@ package es.ing.instituciones.boot.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import es.ing.instituciones.controller.IDemoController;
+import es.ing.instituciones.controller.impl.DemoControllerImpl;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
@@ -23,8 +26,14 @@ public class InstitucionesPublicasConfiguration {
      * Definición de Bean para Swagger
      */
     @Bean
-    public Docket productApi() {
+    public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("es.ing.instituciones.controller")).build();
+                .apis(RequestHandlerSelectors.basePackage("es.ing.instituciones.controller")).paths(PathSelectors.any())
+                .build();
+    }
+
+    @Bean
+    public IDemoController demoController() {
+        return new DemoControllerImpl();
     }
 }
