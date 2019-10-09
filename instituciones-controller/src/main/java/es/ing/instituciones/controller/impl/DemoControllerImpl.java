@@ -1,6 +1,5 @@
 package es.ing.instituciones.controller.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -15,12 +14,20 @@ import es.ing.instituciones.service.IDemoService;
  */
 public class DemoControllerImpl implements IDemoController {
 
-    @Autowired
     private IDemoService demoService;
+
+    public DemoControllerImpl(IDemoService demoService) {
+        this.demoService = demoService;
+    }
 
     @Override
     public ResponseEntity<String> getHelloWorld() {
         return new ResponseEntity<String>(demoService.getHelloWorld(), HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<String> getHelloWorldWithError() {
+        return new ResponseEntity<String>(demoService.getHelloWorldError(), HttpStatus.OK);
     }
 
 }

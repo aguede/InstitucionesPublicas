@@ -24,6 +24,7 @@
 		<project.version>0.0.1-SNAPSHOT</project.version>
 		<parent.spring.version>2.1.9.RELEASE</parent.spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<swagger.version>2.9.2</swagger.version>
 	</properties>
 
 	<dependencies>
@@ -38,12 +39,12 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
-			<version>2.7.0</version>
+			<version>${swagger.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.7.0</version>
+			<version>${swagger.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>

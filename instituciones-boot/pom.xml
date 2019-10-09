@@ -23,5 +23,20 @@
 			<artifactId>instituciones-controller</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>instituciones-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>instituciones-repository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>instituciones-batch</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

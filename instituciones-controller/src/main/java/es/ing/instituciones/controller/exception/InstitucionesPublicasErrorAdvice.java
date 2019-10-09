@@ -7,7 +7,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import es.ing.instituciones.bean.error.InstitucionesPublicasErrorBean;
-import es.ing.instituciones.bean.exception.InstitucionesPublicasControllerException;
+import es.ing.instituciones.bean.exception.InstitucionesPublicasServiceException;
 
 /**
  * Gestión de errores de controladores de Portal de Proveedores.
@@ -22,9 +22,9 @@ public class InstitucionesPublicasErrorAdvice extends ResponseEntityExceptionHan
      * @param request Petición de la llamada.
      * @return ResponseEntity con los datos de la excepción.
      */
-    @ExceptionHandler(InstitucionesPublicasControllerException.class)
+    @ExceptionHandler(InstitucionesPublicasServiceException.class)
     public ResponseEntity<InstitucionesPublicasErrorBean> handleProveedoresException(
-            InstitucionesPublicasControllerException e, WebRequest request) {
+            InstitucionesPublicasServiceException e, WebRequest request) {
 
         return new ResponseEntity<>(e.getError(), e.getStatus());
     }
