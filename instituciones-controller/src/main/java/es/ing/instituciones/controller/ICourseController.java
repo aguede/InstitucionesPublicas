@@ -70,7 +70,7 @@ public interface ICourseController {
 	@ApiOperation(value = "Delete a Course", response = String.class, responseContainer = "ResponseEntity")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Course deleted"),
 			@ApiResponse(code = 404, message = "The course to delete does not exists") })
-	@DeleteMapping(path = "/", produces = "application/json")
+	@DeleteMapping(produces = "application/json")
 	public ResponseEntity<?> delete(@Valid @RequestBody Long id);
 
 }
