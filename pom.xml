@@ -54,7 +54,6 @@
 	<modules>
 		<module>instituciones-boot</module>
 		<module>instituciones-controller</module>
-		<module>instituciones-batch</module>
 		<module>instituciones-service</module>
 		<module>instituciones-repository</module>
 		<module>instituciones-bean</module>
