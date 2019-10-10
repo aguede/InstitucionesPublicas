@@ -1,5 +1,7 @@
 package es.ing.instituciones.bean.exception;
 
+import org.springframework.http.HttpStatus;
+
 /**
  * Excepción para la capa Service.
  * 
@@ -13,6 +15,10 @@ public class InstitucionesPublicasServiceException extends InstitucionesPublicas
 
     public InstitucionesPublicasServiceException(Exception another) {
         super(another);
+    }
+    
+    public InstitucionesPublicasServiceException(Exception e, HttpStatus status, String message) {
+        super(e, status, message);
     }
 
 }

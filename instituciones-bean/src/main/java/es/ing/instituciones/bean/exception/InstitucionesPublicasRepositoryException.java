@@ -1,5 +1,7 @@
 package es.ing.instituciones.bean.exception;
 
+import org.springframework.http.HttpStatus;
+
 /**
  * Excepción para la capa Repository.
  * 
@@ -13,6 +15,10 @@ public class InstitucionesPublicasRepositoryException extends InstitucionesPubli
 
     public InstitucionesPublicasRepositoryException(Exception another) {
         super(another);
+    }
+    
+    public InstitucionesPublicasRepositoryException(Exception e, HttpStatus status, String message) {
+        super(e, status, message);
     }
 
 }
