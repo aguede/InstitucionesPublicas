@@ -23,4 +23,12 @@ public interface IDemoService {
      * @return
      */
     public String getHelloWorldError() throws InstitucionesPublicasServiceException;
+
+    /**
+     * Lee un csv y lo devuelve en Base64.
+     * 
+     * @return el csv en base64
+     */
+    public String getCsvAsStream();
+
 }
