@@ -1,4 +1,4 @@
-package es.ing.instituciones.repository.entities;
+package es.ing.instituciones.bean.modelo;
 
 import java.io.Serializable;
 
@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Course implements Serializable {
+public class CourseBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

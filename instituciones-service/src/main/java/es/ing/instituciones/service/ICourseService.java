@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import es.ing.instituciones.repository.entities.Course;
+import es.ing.instituciones.bean.exception.InstitucionesPublicasServiceException;
+import es.ing.instituciones.bean.modelo.CourseBean;
 import es.ing.instituciones.repository.exceptions.EntityNotFoundException;
 
 /**
@@ -22,7 +23,7 @@ public interface ICourseService {
 	 * @param course - curso a crear
 	 * @return curso - creado
 	 */
-	public Course create(Course course);
+	public CourseBean create(CourseBean course);
 	
 	/**
 	 * Actualiza un curso
@@ -32,7 +33,7 @@ public interface ICourseService {
 	 * @return curso actualizado
 	 * @throws EntityNotFoundException Excepción en caso de no haber encontrado el curso a actualizar
 	 */
-	public Course update(Long id, Course course) throws EntityNotFoundException;
+	public CourseBean update(Long id, CourseBean course) throws InstitucionesPublicasServiceException;
 
 	/**
 	 * Elimina un curso
@@ -40,14 +41,14 @@ public interface ICourseService {
 	 * @param id - identificación del curso a eliminar
 	 * @throws EntityNotFoundException Excepción en caso de no haber encontrado el curso a eliminar
 	 */
-	public void delete(Long id) throws EntityNotFoundException;
+	public void delete(Long id) throws InstitucionesPublicasServiceException;
 
 	/**
 	 * Buscar todos los cursos
 	 * 
 	 * @return lista de todos los cursos
 	 */
-	public List<Course> findAll();
+	public List<CourseBean> findAll();
 	
 	/**
 	 * Bucar un curso
@@ -56,6 +57,6 @@ public interface ICourseService {
 	 * @return curso buscado
 	 * @throws EntityNotFoundException Excepción en caso de no haber encontrado el curso
 	 */
-	public Course findOne(Long id) throws EntityNotFoundException;
+	public CourseBean findOne(Long id) throws InstitucionesPublicasServiceException;
 
 }
