@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import es.ing.instituciones.bean.exception.InstitucionesPublicasServiceException;
 import es.ing.instituciones.bean.modelo.CourseBean;
-import es.ing.instituciones.repository.exceptions.EntityNotFoundException;
 
 /**
  * Lógica de negocio referente a los Courses
