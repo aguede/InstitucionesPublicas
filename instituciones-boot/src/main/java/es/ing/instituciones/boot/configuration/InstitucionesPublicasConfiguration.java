@@ -24,7 +24,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * Configuración del proyecto Instituciones Públicas. Toda la posibledsadas
+ * Configuración del proyecto Instituciones Públicas. Toda la posible
  * configuración irá dentro de esta clase.
  * 
  * @author alejandro.guede
