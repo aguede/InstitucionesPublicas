@@ -9,9 +9,7 @@
 		<artifactId>instituciones</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>es.ing</groupId>
 	<artifactId>instituciones-it</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>instituciones-it</name>
 	<url>http://maven.apache.org</url>
 	<properties>
