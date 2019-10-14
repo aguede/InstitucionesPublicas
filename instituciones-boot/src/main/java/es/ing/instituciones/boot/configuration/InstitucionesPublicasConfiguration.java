@@ -36,7 +36,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class InstitucionesPublicasConfiguration {
 
     /**
-     * Definición de Bean para Swagger
+     * Definicion de Bean para Swagger.
      */
     @Bean
     public Docket productApi() {
