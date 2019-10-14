@@ -8,7 +8,7 @@ import lombok.Setter;
 
 /**
  * Excepción padre de excepciones Unchecked para la aplicación de instituciones
- * publicas.
+ * publicas. Excepciones to wapas para el project
  * 
  * @author alejandro.guede
  *
