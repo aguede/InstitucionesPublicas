@@ -1,0 +1,19 @@
+08:48:26.289 [main] INFO  e.i.i.boot.InstitucionesApplication - Starting InstitucionesApplication on aguede650w10 with PID 14856 (C:\Development\Projects\InstPublicas\Repository\InstitucionesPublicas\instituciones-boot\target\classes started by alejandro.guede in C:\Development\Projects\InstPublicas\Repository\InstitucionesPublicas\instituciones-boot)
+08:48:26.300 [main] INFO  e.i.i.boot.InstitucionesApplication - No active profile set, falling back to default profiles: default
+08:48:27.675 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$961fe28c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+08:48:28.607 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+08:48:28.640 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+08:48:28.642 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+08:48:28.760 [main] INFO  o.a.c.c.C.[.[.[/institucionespublicas] - Initializing Spring embedded WebApplicationContext
+08:48:28.761 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2405 ms
+08:48:29.292 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+08:48:29.417 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+08:48:29.632 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+08:48:29.935 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+08:48:30.193 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+08:48:30.232 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+08:48:30.284 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+08:48:30.617 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/institucionespublicas'
+08:48:30.620 [main] INFO  e.i.i.boot.InstitucionesApplication - Started InstitucionesApplication in 4.786 seconds (JVM running for 11.528)
+10:44:52.344 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m52s489ms772µs).
+10:48:51.148 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m58s816ms827µs100ns).
