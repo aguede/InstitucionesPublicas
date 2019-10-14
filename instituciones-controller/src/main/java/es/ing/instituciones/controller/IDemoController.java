@@ -19,6 +19,7 @@ import io.swagger.annotations.ApiResponses;
 @Api(value = "APi rest para demostración.")
 public interface IDemoController {
 
+	// Esto va en otro fichero XD
     /** Paths del api rest. */
     public static class Paths {
         /** Mapeo del api rest definido. */
