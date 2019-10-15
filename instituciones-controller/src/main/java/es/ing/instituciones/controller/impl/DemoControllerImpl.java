@@ -8,13 +8,14 @@ import es.ing.instituciones.service.IDemoService;
 
 /**
  * Implementación de la interfaz {@link IDemoController}
- * 
+ *
+ *
  * @author alejandro.guede
  *
  */
 public class DemoControllerImpl implements IDemoController {
 
-    private IDemoService demoService;
+    private final IDemoService demoService;
 
     public DemoControllerImpl(IDemoService demoService) {
         this.demoService = demoService;
