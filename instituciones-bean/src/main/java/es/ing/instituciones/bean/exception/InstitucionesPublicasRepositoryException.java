@@ -3,7 +3,7 @@ package es.ing.instituciones.bean.exception;
 import org.springframework.http.HttpStatus;
 
 /**
- * Excepcion para la capa Repository.
+ * Excepción para la capa Repository.
  * 
  * @author alejandro.guede
  *
