@@ -45,12 +45,12 @@ public interface ICourseController {
     @PostMapping(produces = "application/json")
     public ResponseEntity<CourseBean> create(@Valid @RequestBody CourseBean course);
 
-    @ApiOperation(value = "Update a Course", response = CourseBean.class, responseContainer = "ResponseEntity")
-    @ApiResponses(value = { @ApiResponse(code = 200, message = "Updated the course"),
-                            @ApiResponse(code = 404, message = "The course to update does not exists"),
+    @ApiOperation(value = "Update a Course")
+    @ApiResponses(value = { @ApiResponse(code = 200, message = "OK"),
+                            @ApiResponse(code = 412, message = "The course to update does not exists"),
                             @ApiResponse(code = 500, message = "Not all mandatory fields have been provided") })
-    @PutMapping(produces = "application/json")
-    public ResponseEntity<CourseBean> update(@Valid @RequestBody CourseBean course);
+    @PutMapping
+    public void update(@Valid @RequestBody CourseBean course);
 
     @ApiOperation(value = "Find all Courses", response = CourseBean.class, responseContainer = "ResponseEntity")
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Created the course") })
@@ -59,15 +59,15 @@ public interface ICourseController {
 
     @ApiOperation(value = "Find one Course", response = CourseBean.class, responseContainer = "ResponseEntity")
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Found the course"),
-                            @ApiResponse(code = 404, message = "The course does not exists"),
+                            @ApiResponse(code = 412, message = "The course does not exists"),
                             @ApiResponse(code = 500, message = "Not all mandatory fields have been provided") })
     @GetMapping(path = ICourseController.Paths.GET, produces = "application/json")
     public ResponseEntity<CourseBean> get(@PathVariable(value = "id") Long id);
 
-    @ApiOperation(value = "Delete a Course", response = String.class, responseContainer = "ResponseEntity")
-    @ApiResponses(value = { @ApiResponse(code = 200, message = "CourseBean deleted"),
-                            @ApiResponse(code = 404, message = "The course to delete does not exists") })
-    @DeleteMapping(produces = "application/json")
-    public ResponseEntity<String> delete(@Valid @RequestBody Long id);
+    @ApiOperation(value = "Delete a Course")
+    @ApiResponses(value = { @ApiResponse(code = 200, message = "OK"),
+                            @ApiResponse(code = 412, message = "The course to delete does not exists") })
+    @DeleteMapping
+    public void delete(@Valid @RequestBody Long id);
 
 }
