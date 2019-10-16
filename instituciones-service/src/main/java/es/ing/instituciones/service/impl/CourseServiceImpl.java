@@ -21,17 +21,17 @@ import es.ing.instituciones.service.ICourseService;
 public class CourseServiceImpl implements ICourseService {
 
     @Autowired
-    private ICourseRepository courseMapper;
+    private ICourseRepository courseRepository;
 
     @Override
     public CourseBean create(CourseBean course) {
-        courseMapper.insert(course);
+        courseRepository.insert(course);
         return course;
     }
 
     @Override
     public CourseBean update(Long id, CourseBean course) {
-        final CourseBean courseBD = courseMapper.getById(id);
+        final CourseBean courseBD = courseRepository.getById(id);
         if (courseBD == null) {
             throw new InstitucionesPublicasServiceException(null, HttpStatus.PRECONDITION_FAILED,
                     "The course to update does not exists");
@@ -42,27 +42,27 @@ public class CourseServiceImpl implements ICourseService {
         courseBD.setTeacher(course.getTeacher());
         courseBD.setState(course.getState());
 
-        courseMapper.update(courseBD);
+        courseRepository.update(courseBD);
         return courseBD;
     }
 
     @Override
     public void delete(Long id) {
-        if (courseMapper.getById(id) == null) {
+        if (courseRepository.getById(id) == null) {
             throw new InstitucionesPublicasServiceException(null, HttpStatus.PRECONDITION_FAILED,
                     "The course to delete does not exists");
         }
-        courseMapper.deleteById(id);
+        courseRepository.deleteById(id);
     }
 
     @Override
     public List<CourseBean> findAll() {
-        return courseMapper.getAll();
+        return courseRepository.getAll();
     }
 
     @Override
     public CourseBean findOne(Long id) {
-        final CourseBean course = courseMapper.getById(id);
+        final CourseBean course = courseRepository.getById(id);
         if (course == null) {
             throw new InstitucionesPublicasServiceException(null, HttpStatus.PRECONDITION_FAILED,
                     "The course does not exists");
