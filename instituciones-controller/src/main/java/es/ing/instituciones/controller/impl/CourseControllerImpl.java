@@ -36,7 +36,6 @@ public class CourseControllerImpl implements ICourseController {
 
     @Override
     public void update(@Valid @RequestBody CourseBean course) {
-        //return ResponseEntity.ok().body(courseService.update(course.getId(), course));
         courseService.update(course.getId(), course);
     }
 
