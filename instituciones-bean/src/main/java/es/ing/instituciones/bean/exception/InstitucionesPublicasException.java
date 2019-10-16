@@ -9,7 +9,7 @@ import lombok.Setter;
 /**
  * Excepción padre de excepciones Unchecked para la aplicación de instituciones
  * publicas.
- * 
+ *
  * @author alejandro.guede
  *
  */
@@ -18,11 +18,11 @@ import lombok.Setter;
 public class InstitucionesPublicasException extends RuntimeException {
 
     /** SerialVersionUID. */
-    private static final long serialVersionUID = 253343219816133133L;
+    private static final long                    serialVersionUID = 253343219816133133L;
     /** Error Bean institucionesPublicas */
-    private InstitucionesPublicasErrorBean error;
+    private final InstitucionesPublicasErrorBean error;
     /** Status del error */
-    private HttpStatus status;
+    private final HttpStatus                     status;
 
     public InstitucionesPublicasException(Exception another) {
         super(another);
@@ -30,7 +30,7 @@ public class InstitucionesPublicasException extends RuntimeException {
         error.setTimestamp(System.currentTimeMillis());
         error.setMessage(another.getMessage());
         error.setException(another.getMessage());
-        this.status = HttpStatus.INTERNAL_SERVER_ERROR;
+        status = HttpStatus.INTERNAL_SERVER_ERROR;
     }
 
     public InstitucionesPublicasException(Exception e, HttpStatus status, String message) {
