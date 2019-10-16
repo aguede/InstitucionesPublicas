@@ -9,15 +9,15 @@ import es.ing.instituciones.service.IDemoService;
 
 /**
  * Implementación de la clase DemoService.
- * 
+ *
  * @author alejandro.guede
  *
  */
 public class DemoServiceImpl implements IDemoService {
 
-    Logger logger = LoggerFactory.getLogger(DemoServiceImpl.class);
+    Logger                        logger = LoggerFactory.getLogger(DemoServiceImpl.class);
 
-    private IDemoRepository demoRepository;
+    private final IDemoRepository demoRepository;
 
     public DemoServiceImpl(IDemoRepository demoRepository) {
         this.demoRepository = demoRepository;
@@ -34,8 +34,9 @@ public class DemoServiceImpl implements IDemoService {
     public String getHelloWorldError() throws InstitucionesPublicasServiceException {
 
         try {
-            Integer.parseInt("hola");
-        } catch (Exception e) {
+            Integer.parseInt("halo");
+        }
+        catch (final Exception e) {
             throw new InstitucionesPublicasServiceException(e);
         }
 
