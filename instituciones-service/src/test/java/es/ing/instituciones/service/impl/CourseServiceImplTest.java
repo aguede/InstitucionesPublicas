@@ -11,6 +11,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import es.ing.instituciones.bean.exception.InstitucionesPublicasServiceException;
 import es.ing.instituciones.bean.modelo.CourseBean;
 import es.ing.instituciones.repository.database.ICourseRepository;
 
@@ -58,6 +59,17 @@ public class CourseServiceImplTest {
     }
 
     @Test
+    public void findOneExceptionTest() {
+        // 1- Given
+        Mockito.when(courseRepository.getById(1L)).thenReturn(null);
+
+        // 2- Assert
+        Assertions.assertThrows(InstitucionesPublicasServiceException.class, () -> {
+            courseServiceImpl.findOne(1L);
+        });
+    }
+
+    @Test
     public void updateTest() {
         // 1- Given
         final CourseBean course = new CourseBean(1L, "Curso", "Alto", 8, "Daniel", true);
@@ -68,11 +80,24 @@ public class CourseServiceImplTest {
         final CourseBean returnResulted = courseServiceImpl.update(1L, returnGiven);
 
         // 3- Assert
+        Mockito.verify(courseRepository, Mockito.times(1)).update(course);
         Assertions.assertEquals(returnGiven.getTitle(), returnResulted.getTitle());
         Assertions.assertEquals(returnGiven.getLevel(), returnResulted.getLevel());
         Assertions.assertEquals(returnGiven.getNumberOfHours(), returnResulted.getNumberOfHours());
         Assertions.assertEquals(returnGiven.getTeacher(), returnResulted.getTeacher());
         Assertions.assertEquals(returnGiven.getState(), returnResulted.getState());
+    }
+
+    @Test
+    public void updateExceptionTest() {
+        // 1- Given
+        final CourseBean returnGiven = new CourseBean(1L, "Clase", "Baja", 8, "Pedro", true);
+        Mockito.when(courseRepository.getById(1L)).thenReturn(null);
+
+        // 2- Assert
+        Assertions.assertThrows(InstitucionesPublicasServiceException.class, () -> {
+            courseServiceImpl.update(1L, returnGiven);
+        });
     }
 
     @Test
@@ -98,6 +123,17 @@ public class CourseServiceImplTest {
 
         // 3- Assert
         Mockito.verify(courseRepository, Mockito.times(1)).deleteById(1L);
+    }
+
+    @Test
+    public void deleteExceptionTest() {
+        // 1- Given
+        Mockito.when(courseRepository.getById(1L)).thenReturn(null);
+
+        // 2- Assert
+        Assertions.assertThrows(InstitucionesPublicasServiceException.class, () -> {
+            courseServiceImpl.delete(1L);
+        });
     }
 
 }
