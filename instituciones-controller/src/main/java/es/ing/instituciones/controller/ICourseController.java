@@ -68,6 +68,6 @@ public interface ICourseController {
     @ApiResponses(value = { @ApiResponse(code = 200, message = "OK"),
                             @ApiResponse(code = 412, message = "The course to delete does not exists") })
     @DeleteMapping
-    public ResponseEntity<?> delete(@Valid @RequestBody Long id);
+    public ResponseEntity<Void> delete(@Valid @RequestBody Long id);
 
 }
