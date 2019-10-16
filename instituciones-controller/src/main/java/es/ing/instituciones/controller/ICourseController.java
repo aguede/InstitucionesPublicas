@@ -50,7 +50,7 @@ public interface ICourseController {
                             @ApiResponse(code = 412, message = "The course to update does not exists"),
                             @ApiResponse(code = 500, message = "Not all mandatory fields have been provided") })
     @PutMapping
-    public void update(@Valid @RequestBody CourseBean course);
+    public ResponseEntity<Void> update(@Valid @RequestBody CourseBean course);
 
     @ApiOperation(value = "Find all Courses", response = CourseBean.class, responseContainer = "ResponseEntity")
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Created the course") })
@@ -68,6 +68,6 @@ public interface ICourseController {
     @ApiResponses(value = { @ApiResponse(code = 200, message = "OK"),
                             @ApiResponse(code = 412, message = "The course to delete does not exists") })
     @DeleteMapping
-    public void delete(@Valid @RequestBody Long id);
+    public ResponseEntity<?> delete(@Valid @RequestBody Long id);
 
 }

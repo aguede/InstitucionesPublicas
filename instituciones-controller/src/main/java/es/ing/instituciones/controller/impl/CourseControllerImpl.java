@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,8 +36,9 @@ public class CourseControllerImpl implements ICourseController {
     }
 
     @Override
-    public void update(@Valid @RequestBody CourseBean course) {
+    public ResponseEntity<Void> update(@Valid @RequestBody CourseBean course) {
         courseService.update(course.getId(), course);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @Override
@@ -50,8 +52,9 @@ public class CourseControllerImpl implements ICourseController {
     }
 
     @Override
-    public void delete(@Valid @RequestBody Long id) {
+    public ResponseEntity<Void> delete(@Valid @RequestBody Long id) {
         courseService.delete(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
