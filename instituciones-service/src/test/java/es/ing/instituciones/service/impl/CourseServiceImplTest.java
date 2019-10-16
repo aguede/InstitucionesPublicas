@@ -64,9 +64,11 @@ public class CourseServiceImplTest {
         Mockito.when(courseRepository.getById(1L)).thenReturn(null);
 
         // 2- Assert
-        Assertions.assertThrows(InstitucionesPublicasServiceException.class, () -> {
-            courseServiceImpl.findOne(1L);
-        });
+        final InstitucionesPublicasServiceException exception = Assertions
+                .assertThrows(InstitucionesPublicasServiceException.class, () -> {
+                    courseServiceImpl.findOne(1L);
+                });
+        Assertions.assertEquals("The course does not exists", exception.getError().getMessage());
     }
 
     @Test
@@ -95,9 +97,11 @@ public class CourseServiceImplTest {
         Mockito.when(courseRepository.getById(1L)).thenReturn(null);
 
         // 2- Assert
-        Assertions.assertThrows(InstitucionesPublicasServiceException.class, () -> {
-            courseServiceImpl.update(1L, returnGiven);
-        });
+        final InstitucionesPublicasServiceException exception = Assertions
+                .assertThrows(InstitucionesPublicasServiceException.class, () -> {
+                    courseServiceImpl.update(1L, returnGiven);
+                });
+        Assertions.assertEquals("The course to update does not exists", exception.getError().getMessage());
     }
 
     @Test
@@ -131,9 +135,11 @@ public class CourseServiceImplTest {
         Mockito.when(courseRepository.getById(1L)).thenReturn(null);
 
         // 2- Assert
-        Assertions.assertThrows(InstitucionesPublicasServiceException.class, () -> {
-            courseServiceImpl.delete(1L);
-        });
+        final InstitucionesPublicasServiceException exception = Assertions
+                .assertThrows(InstitucionesPublicasServiceException.class, () -> {
+                    courseServiceImpl.delete(1L);
+                });
+        Assertions.assertEquals("The course to delete does not exists", exception.getError().getMessage());
     }
 
 }
