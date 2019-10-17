@@ -23,12 +23,12 @@ public class DemoControllerImpl implements IDemoController {
 
     @Override
     public ResponseEntity<String> getHelloWorld() {
-        return new ResponseEntity<String>(demoService.getHelloWorld(), HttpStatus.OK);
+        return new ResponseEntity<>(demoService.getHelloWorld(), HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<String> getHelloWorldWithError() {
-        return new ResponseEntity<String>(demoService.getHelloWorldError(), HttpStatus.OK);
+        return new ResponseEntity<>(demoService.getHelloWorldError(), HttpStatus.OK);
     }
 
 }
