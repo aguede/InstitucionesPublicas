@@ -1,5 +1,7 @@
 package es.ing.instituciones.service;
 
+import es.ing.instituciones.bean.exception.InstitucionesPublicasServiceException;
+
 /**
  * Lógica de negocio para una demostración.
  *
@@ -20,7 +22,7 @@ public interface IDemoService {
      *
      * @return
      */
-    public String getHelloWorldError();
+    public String getHelloWorldError() throws InstitucionesPublicasServiceException;
 
     /**
      * Lee un csv y lo devuelve en Base64.
