@@ -31,7 +31,7 @@ public class DemoServiceImpl implements IDemoService {
     }
 
     @Override
-    public String getHelloWorldError() throws InstitucionesPublicasServiceException {
+    public String getHelloWorldError() {
 
         try {
             Integer.parseInt("halo");
