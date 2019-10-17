@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import es.ing.instituciones.bean.exception.InstitucionesPublicasServiceException;
 import es.ing.instituciones.repository.mock.impl.DemoRepositoryImpl;
 
 /**
@@ -37,4 +38,12 @@ public class DemoServiceImplTest {
         // 3- Assert
         Assertions.assertEquals(returnGiven, returnResulted);
     }
+
+    @Test
+    public void getHelloWorldErrorTest() {
+        Assertions.assertThrows(InstitucionesPublicasServiceException.class, () -> {
+            demoServiceImpl.getHelloWorldError();
+        });
+    }
+
 }
