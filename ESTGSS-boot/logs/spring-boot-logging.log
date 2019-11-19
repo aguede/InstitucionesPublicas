@@ -131,3 +131,89 @@ Consider defining a bean of type 'com.ing.pensions.repository.database.IRemmitta
 15:13:32.969 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
 15:13:33.347 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path '/institucionespublicas'
 15:13:33.347 [main] INFO  c.i.p.boot.ESTGSSPensionsApplication - Started ESTGSSPensionsApplication in 9.183 seconds (JVM running for 10.331)
+12:14:00.648 [main] INFO  c.i.p.boot.ESTGSSPensionsApplication - Starting ESTGSSPensionsApplication on aguede650w10 with PID 26876 (C:\Users\alejandro.guede\git\InstitucionesPublicas\ESTGSS-boot\target\classes started by alejandro.guede in C:\Users\alejandro.guede\git\InstitucionesPublicas\ESTGSS-boot)
+12:14:00.653 [main] INFO  c.i.p.boot.ESTGSSPensionsApplication - No active profile set, falling back to default profiles: default
+12:14:02.439 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f432901d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:14:03.814 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+12:14:03.863 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:14:03.863 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+12:14:04.068 [main] INFO  o.a.c.c.C.[.[.[/institucionespublicas] - Initializing Spring embedded WebApplicationContext
+12:14:04.068 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3326 ms
+12:14:04.874 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:14:05.205 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:14:05.596 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+12:14:05.877 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+12:14:06.243 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+12:14:06.296 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+12:14:06.373 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+12:14:06.780 [main] ERROR o.apache.catalina.util.LifecycleBase - Failed to start component [Connector[HTTP/1.1-8090]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.ing.pensions.boot.ESTGSSPensionsApplication.main(ESTGSSPensionsApplication.java:10)
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:461)
+	at java.base/sun.nio.ch.Net.bind(Net.java:453)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005)
+	... 14 common frames omitted
+12:14:06.806 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:14:06.821 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+12:14:06.832 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8090 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8090, or configure this application to listen on another port.
+
+12:14:06.838 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+12:14:06.848 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+12:14:06.854 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:15:20.457 [main] INFO  c.i.p.boot.ESTGSSPensionsApplication - Starting ESTGSSPensionsApplication on aguede650w10 with PID 26876 (C:\Users\alejandro.guede\git\InstitucionesPublicas\ESTGSS-boot\target\classes started by alejandro.guede in C:\Users\alejandro.guede\git\InstitucionesPublicas\ESTGSS-boot)
+12:15:20.463 [main] INFO  c.i.p.boot.ESTGSSPensionsApplication - No active profile set, falling back to default profiles: default
+12:15:23.110 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d34c1cbb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12:15:24.919 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+12:15:24.972 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:15:24.972 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+12:15:25.159 [main] INFO  o.a.c.c.C.[.[.[/institucionespublicas] - Initializing Spring embedded WebApplicationContext
+12:15:25.160 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4608 ms
+12:15:25.900 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:15:26.144 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:15:26.422 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+12:15:26.630 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+12:15:26.925 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+12:15:26.982 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+12:15:27.047 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+12:15:27.453 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/institucionespublicas'
+12:15:27.463 [main] INFO  c.i.p.boot.ESTGSSPensionsApplication - Started ESTGSSPensionsApplication in 7.664 seconds (JVM running for 8.364)
+12:21:02.641 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/institucionespublicas] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:21:02.649 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:21:02.664 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
