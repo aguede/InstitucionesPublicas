@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
+	<CstmrCdtTrfInitn>
+		<GrpHdr><MsgId>1465205320170627000101</MsgId><CreDtTm>2017-06-27T10:26:56</CreDtTm><NbOfTxs>1</NbOfTxs><CtrlSum>907.79</CtrlSum><InitgPty><Nm>TESORERIA GENERAL DE LA SEGURIDAD SOCIAL</Nm><Id><OrgId><Othr><Id>Q2827003A000</Id></Othr></OrgId></Id></InitgPty></GrpHdr>
+		<PmtInf>
+		<PmtInfId>146520532017062700010101</PmtInfId><PmtMtd>TRF</PmtMtd><BtchBookg>true</BtchBookg><NbOfTxs>66444</NbOfTxs><CtrlSum>69157776.53</CtrlSum><PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl><CtgyPurp><Cd>PENS</Cd></CtgyPurp></PmtTpInf><ReqdExctnDt>2017-07-01</ReqdExctnDt><Dbtr><Nm>TESORERIA GENERAL DE LA SEGURIDAD SOCIAL</Nm><PstlAdr><Ctry>ES</Ctry><AdrLine>PLAZA DE LOS ASTROS 5-7  28071-MADRID</AdrLine></PstlAdr><Id><OrgId><Othr><Id>Q2827003A000</Id></Othr></OrgId></Id></Dbtr><DbtrAcct><Id><IBAN>ES451465010961000506154</IBAN></Id></DbtrAcct><DbtrAgt><FinInstnId><Othr><Id>NOTPROVIDED</Id></Othr></FinInstnId></DbtrAgt>
+		<CdtTrfTxInf><PmtId><EndToEndId>1282015200080688501001287226473686</EndToEndId></PmtId><Amt><InstdAmt Ccy="EUR">907.79</InstdAmt></Amt><UltmtDbtr><Nm>INSS</Nm></UltmtDbtr><Cdtr><Nm>ABACA BERNALES AZUCENA</Nm><Id><PrvtId><Othr><Id>50729349C</Id><SchmeNm><Prtry>0</Prtry></SchmeNm></Othr></PrvtId></Id></Cdtr><CdtrAcct><Id><IBAN>ES2814650100931715695367</IBAN></Id></CdtrAcct><RmtInf><Ustrd>PRUEBA DE ENVIO DE FICHERO XML 06-2017</Ustrd></RmtInf></CdtTrfTxInf>
+		
+		</PmtInf>
+	</CstmrCdtTrfInitn>
+</Document>
