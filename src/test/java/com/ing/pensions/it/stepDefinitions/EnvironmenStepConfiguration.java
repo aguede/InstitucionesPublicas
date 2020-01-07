@@ -40,7 +40,7 @@ public class EnvironmenStepConfiguration {
             capabilities.setBrowserName("chrome");
             capabilities.setPlatform(Platform.LINUX);
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOpt);
-            System.setProperty("webdriver.chrome.driver", "$JENKINS_HOME/tools/chromedriver/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
 
             driver = new ChromeDriver(chromeOpt);
 
