@@ -3,11 +3,9 @@ package com.ing.pensions.it.stepDefinitions;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -33,13 +31,14 @@ public class EnvironmenStepConfiguration {
 
             driver = new ChromeDriver(chromeOpt);
         } else {
-            final DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+            // final DesiredCapabilities capabilities =
+            // DesiredCapabilities.chrome();
             final ChromeOptions chromeOpt = new ChromeOptions();
             chromeOpt.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
                     "--ignore-certificate-errors");
-            capabilities.setBrowserName("chrome");
-            capabilities.setPlatform(Platform.LINUX);
-            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOpt);
+            // capabilities.setBrowserName("chrome");
+            // capabilities.setPlatform(Platform.LINUX);
+            // capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOpt);
             System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
 
             driver = new ChromeDriver(chromeOpt);
