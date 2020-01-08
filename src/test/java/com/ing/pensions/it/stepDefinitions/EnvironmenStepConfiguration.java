@@ -43,8 +43,9 @@ public class EnvironmenStepConfiguration {
             // System.setProperty("webdriver.chrome.driver",
             // "/var/lib/jenkins/tools/chromedriver/chromedriver");
 
-            System.setProperty("webdriver.chrome.driver",
-                    EnvironmenStepConfiguration.class.getClassLoader().getResource("chromedriver").getPath());
+            // System.setProperty("webdriver.chrome.driver",
+            // EnvironmenStepConfiguration.class.getClassLoader().getResource("chromedriver").getPath());
+            System.setProperty("webdriver.chrome.driver", "/home/estgss/Desktop/chromedriver");
             final ChromeOptions chromeOpt = new ChromeOptions();
             chromeOpt.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
                     "--ignore-certificate-errors");
