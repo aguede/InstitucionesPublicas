@@ -58,5 +58,37 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources/features</directory>
+				<includes>
+					<include>**/*.feature</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources/features</directory>
+				<excludes>
+					<exclude>**/*.feature</exclude>
+				</excludes>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources/driver</directory>
+				<includes>
+					<include>chromedriver.exe</include>
+					<include>chromedriver</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources/driver</directory>
+				<excludes>
+					<exclude>chromedriver.exe</exclude>
+					<exclude>chromedriver</exclude>
+				</excludes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 	</build>
 </project>

@@ -23,8 +23,8 @@ public class EnvironmenStepConfiguration {
             // System.setProperty("phantomjs.binary.path", path);
             // driver = new PhantomJSDriver();
 
-            System.setProperty("webdriver.chrome.driver",
-                    EnvironmenStepConfiguration.class.getClassLoader().getResource("chromedriver.exe").getPath());
+            System.setProperty("webdriver.chrome.driver", EnvironmenStepConfiguration.class.getClassLoader()
+                    .getResource("driver/chromedriver.exe").getPath());
             final ChromeOptions chromeOpt = new ChromeOptions();
             chromeOpt.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
                     "--ignore-certificate-errors");
@@ -45,7 +45,8 @@ public class EnvironmenStepConfiguration {
 
             // System.setProperty("webdriver.chrome.driver",
             // EnvironmenStepConfiguration.class.getClassLoader().getResource("chromedriver").getPath());
-            System.setProperty("webdriver.chrome.driver", "/home/estgss/Desktop/chromedriver");
+            System.setProperty("webdriver.chrome.driver",
+                    EnvironmenStepConfiguration.class.getClassLoader().getResource("driver/chromedriver").getPath());
             final ChromeOptions chromeOpt = new ChromeOptions();
             chromeOpt.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
                     "--ignore-certificate-errors");
