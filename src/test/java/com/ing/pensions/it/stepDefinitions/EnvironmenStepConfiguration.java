@@ -33,13 +33,21 @@ public class EnvironmenStepConfiguration {
         } else {
             // final DesiredCapabilities capabilities =
             // DesiredCapabilities.chrome();
-            final ChromeOptions chromeOpt = new ChromeOptions();
-            chromeOpt.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
-                    "--ignore-certificate-errors");
+            // final ChromeOptions chromeOpt = new ChromeOptions();
+            // chromeOpt.addArguments("--headless", "--disable-gpu",
+            // "--window-size=1920,1200",
+            // "--ignore-certificate-errors");
             // capabilities.setBrowserName("chrome");
             // capabilities.setPlatform(Platform.LINUX);
             // capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOpt);
-            System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
+            // System.setProperty("webdriver.chrome.driver",
+            // "/var/lib/jenkins/tools/chromedriver/chromedriver");
+
+            System.setProperty("webdriver.chrome.driver",
+                    EnvironmenStepConfiguration.class.getClassLoader().getResource("chromedriver").getPath());
+            final ChromeOptions chromeOpt = new ChromeOptions();
+            chromeOpt.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
+                    "--ignore-certificate-errors");
 
             driver = new ChromeDriver(chromeOpt);
 
